@@ -15,6 +15,8 @@ verified by each process, the total number of prime numbers found and the execut
 In the project folder run:
 
 `docker run -d -it --name mpicont -v "$(pwd)"/target:/app augustosalazar/un_mpi_image:v5`
+
+Copy the file [primerChecker.py](./primerChecker.py) to ./target
 # Execution
 `docker exec -it mpicont mpiexec --oversubscribe --allow-run-as-root -n <# Processes> python /app/primerChecker.py <K> <Q>`
 
